@@ -17,7 +17,7 @@ def get_city():
     Returns:
         (str) Filename for a city's bikeshare data.
     '''
-    # TODO: handle raw input and complete function
+   
     # handle raw input
     while True:
         city = input('\nHello! Let\'s explore some US bikeshare data!\n'
@@ -42,9 +42,9 @@ def get_time_period():
     Args:
         none.
     Returns:
-        TODO: fill out return type and description (see get_city for an example)
+        
     '''
-    # TODO: handle raw input and complete function
+   
     # handle raw input
     while True:
         time_period = input('\nWould you like to filter the data by month, day, or not at'
@@ -75,10 +75,8 @@ def get_month():
     Args:
         none.
     Returns:
-        TODO: fill out return type and description (see get_city for an example)
+       
     '''
-
-    # TODO: handle raw input and complete function
     #handle raw input
     while True:
         month = input('\nWhich month? January, February, March, April, May, or June?\n')# ask the user to input which month
@@ -108,9 +106,7 @@ def get_day():
     Args:
         none.
     Returns:
-        TODO: fill out return type and description (see get_city for an example)
     '''
-    # TODO: handle raw input and complete function
     # handle raw input
     while True:
         day = input('\nWhich day? Please type your response as an integer.\n')#ask the user to input which day
@@ -146,10 +142,10 @@ def keywithmaxval(d):
 
 
 def popular_month(city_file, time_period):
-    '''TODO: fill out docstring with description, arguments, and return values.
+    '''
     Question: What is the most popular month for start time?
     '''
-    # TODO: complete function
+    
     month_counts = {'January': 0, 'February': 0, 'March': 0, 'April': 0, 'May': 0, 'June': 0}
     for row in city_file:
         date = datetime.strptime(row['Start Time'], '%Y-%m-%d %H:%M:%S')# use datetime to parse dates
@@ -161,10 +157,10 @@ def popular_month(city_file, time_period):
 
 
 def popular_day(city_file, time_period):
-    '''TODO: fill out docstring with description, arguments, and return values.
+    '''
     Question: What is the most popular day of week (Monday, Tuesday, etc.) for start time?
     '''
-    # TODO: complete function
+   
     day_counts = {'Sunday': 0, 'Monday': 0, 'Tuesday': 0, 'Wednesday': 0, 'Thursday': 0, 'Friday': 0, 'Saturday': 0}
     for row in city_file:
         date = datetime.strptime(row['Start Time'], '%Y-%m-%d %H:%M:%S')
@@ -181,10 +177,10 @@ def popular_day(city_file, time_period):
 
 
 def popular_hour(city_file, time_period):
-    '''TODO: fill out docstring with description, arguments, and return values.
+    '''
     Question: What is the most popular hour of day for start time?
     '''
-    # TODO: complete function
+    
     hour_counts = {0: 0, 1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0, 7: 0, 8: 0, 9: 0, 10: 0, 11: 0, 12: 0, 13: 0, 14: 0, 15: 0,
                    16: 0, 17: 0, 18: 0, 19: 0, 20: 0, 21: 0, 22: 0, 23: 0}
 
@@ -210,10 +206,10 @@ def popular_hour(city_file, time_period):
 
 
 def trip_duration(city_file, time_period):
-    '''TODO: fill out docstring with description, arguments, and return values.
+    '''
     Question: What is the total trip duration and average trip duration?
     '''
-    # TODO: complete function
+   
     # initialize count variables
     n_trips = 0
     n_trip_totals = 0
@@ -241,10 +237,10 @@ def trip_duration(city_file, time_period):
 
 
 def popular_stations(city_file, time_period):
-    '''TODO: fill out docstring with description, arguments, and return values.
+    '''
     Question: What is the most popular start station and most popular end station?
     '''
-    # TODO: complete function
+
     StartDict = {}
     EndDict = {}
     # TODO: complete function
@@ -294,10 +290,10 @@ def popular_stations(city_file, time_period):
 
 
 def popular_trip(city_file, time_period):
-    '''TODO: fill out docstring with description, arguments, and return values.
+    '''
     Question: What is the most popular trip?
     '''
-    # TODO: complete function
+  
     TripDict = {}
     TripKey = ();
 
@@ -332,10 +328,10 @@ def popular_trip(city_file, time_period):
 
 
 def users(city_file, time_period):
-    '''TODO: fill out docstring with description, arguments, and return values.
+    '''
     Question: What are the counts of each user type?
     '''
-    # TODO: complete function
+    
 
     user_counts = {'Subscriber': 0, 'Customer': 0,'Dependent': 0, '': 0}
 
@@ -358,10 +354,9 @@ def users(city_file, time_period):
 
 
 def gender(city, city_file, time_period):
-    '''TODO: fill out docstring with description, arguments, and return values.
+    '''
     Question: What are the counts of gender?
     '''
-    # TODO: complete function
 
     gender_counts = {'Male': 0, 'Female': 0, '': 0}
     if city==new_york_city or city==chicago:#check if new york or chicago
@@ -387,10 +382,9 @@ def gender(city, city_file, time_period):
 
 
 def birth_years(city, city_file, time_period):
-    '''TODO: fill out docstring with description, arguments, and return values.
+    '''
     Question: What are the earliest, most recent, and most popular birth years?
     '''
-    # TODO: complete function
 
     BirthDict = {}
     EarliestYear = 8000.0
@@ -450,12 +444,7 @@ def display_data(city_file):
     Args:
         none.
     Returns:
-        TODO: fill out return type and description (see get_city for an example)
     '''
-
-    # TODO: handle raw input and complete function
-
-
     for row in city_file:
         display = input('\nWould you like to view individual trip data?'
                         'Type \'yes\' or \'no\'.\n')#ask the user if want to view trip data
@@ -530,7 +519,7 @@ def statistics():
 
 # What is the most popular day of week (Monday, Tuesday, etc.) for start time?
     if time_period == 'none' or time_period == 'month':
-# TODO: call popular_day function and print the results
+# call popular_day function and print the results
         result = popular_day(city_file, time_period)
         print("Most popular day:{0}, Count:{1}, Filter:{2}".format(result[0], result[1], time_period))
 
@@ -539,7 +528,7 @@ def statistics():
     start_time = time.time()
 
 # What is the most popular hour of day for start time?
-# TODO: call popular_day function and print the results
+# call popular_day function and print the results
     result = popular_hour(city_file, time_period)
     print("Most popular hour:{0}, Count:{1}, Filter:{2}".format(result[0], result[1], time_period))
     print("That took %s seconds." % (time.time() - start_time))
@@ -547,7 +536,7 @@ def statistics():
     start_time = time.time()
 
 # What is the total trip duration and average trip duration?
-# TODO: call trip_duration function and print the results
+# call trip_duration function and print the results
     result = trip_duration(city_file, time_period)
     print("Total Duration:{0}, Count:{1}, Average Duration:{2}, Filter:{3}".format(result[0], result[1], result[2],
                                                                                time_period))
@@ -557,7 +546,7 @@ def statistics():
     start_time = time.time()
 
 # What is the most popular start station and most popular end station?
-# TODO: call popular_stations function and print the results
+# call popular_stations function and print the results
     result = popular_stations(city_file, time_period)
     print("Start Station:{0}, Count:{1} - End Station:{2}, Count:{3}, Filter:{4}".format(result[0], result[1], result[2],
                                                                                      result[3], time_period))
@@ -566,7 +555,7 @@ def statistics():
     start_time = time.time()
 
 # What is the most popular trip?
-# TODO: call popular_trip function and print the results
+# call popular_trip function and print the results
     result = popular_trip(city_file, time_period)
     print("Trip:{0}, Count:{1}, Filter:{2}".format(result[0], result[1], time_period))
 
@@ -575,7 +564,7 @@ def statistics():
     start_time = time.time()
 
 # What are the counts of each user type?
-# TODO: call users function and print the results
+# call users function and print the results
     result = users(city_file, time_period)
     print("Subscribers:{0}, Customers:{1}, Filter:{2}".format(result[0], result[1], time_period))
 
@@ -584,7 +573,7 @@ def statistics():
     start_time = time.time()
 
 # What are the counts of gender?
-# TODO: call gender function and print the results
+# call gender function and print the results
     result = gender(city, city_file, time_period)
     if result == 'unknown information':
         print('unknown information')
@@ -596,7 +585,7 @@ def statistics():
     start_time = time.time()
 
 # What are the earliest, most recent, and most popular birth years?
-# TODO: call birth_years function and print the results
+# call birth_years function and print the results
     result = birth_years(city, city_file, time_period)
     if result=='unknown information':
         print('unknown information')
